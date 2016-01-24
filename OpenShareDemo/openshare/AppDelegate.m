@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "OpenShareHeader.h"
 #import "ViewController.h"
+#import "MyAppViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -27,7 +28,7 @@
     [OpenShare connectAlipay];//支付宝参数都是服务器端生成的，这里不需要key.
     //添加demo ui
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+    self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:[MyAppViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }

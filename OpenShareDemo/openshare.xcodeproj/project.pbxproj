@@ -25,6 +25,8 @@
 		B66BF3F41B0C1AEB0082F8D6 /* UIControl+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = B66BF3F31B0C1AEB0082F8D6 /* UIControl+Blocks.m */; };
 		B66BF3F81B0C23670082F8D6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B66BF3F71B0C23670082F8D6 /* Default@2x.png */; };
 		B6E22B1F1B213B09001930CA /* OpenShare+Alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E22B1E1B213B09001930CA /* OpenShare+Alipay.m */; };
+		FCD1F76E1C53631800342C71 /* MyAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD1F76D1C53631800342C71 /* MyAppViewController.m */; };
+		FCD1F7711C5363FC00342C71 /* SMShareBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD1F7701C5363FC00342C71 /* SMShareBottomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		B66BF3F71B0C23670082F8D6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images.xcassets/LaunchImage.launchimage/Default@2x.png"; sourceTree = "<group>"; };
 		B6E22B1D1B213B09001930CA /* OpenShare+Alipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Alipay.h"; sourceTree = "<group>"; };
 		B6E22B1E1B213B09001930CA /* OpenShare+Alipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Alipay.m"; sourceTree = "<group>"; };
+		FCD1F76C1C53631800342C71 /* MyAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppViewController.h; sourceTree = "<group>"; };
+		FCD1F76D1C53631800342C71 /* MyAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppViewController.m; sourceTree = "<group>"; };
+		FCD1F76F1C5363FC00342C71 /* SMShareBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMShareBottomView.h; sourceTree = "<group>"; };
+		FCD1F7701C5363FC00342C71 /* SMShareBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMShareBottomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		B66BF3AF1B0C137E0082F8D6 /* openshare */ = {
 			isa = PBXGroup;
 			children = (
+				FCD1F7651C53622800342C71 /* SMShareBottomView */,
 				B66BF3E11B0C16290082F8D6 /* OpenShare */,
 				B66BF3D61B0C143D0082F8D6 /* assets */,
 				B66BF3B41B0C137E0082F8D6 /* AppDelegate.h */,
@@ -185,6 +192,17 @@
 			path = ../../OpenShare;
 			sourceTree = "<group>";
 		};
+		FCD1F7651C53622800342C71 /* SMShareBottomView */ = {
+			isa = PBXGroup;
+			children = (
+				FCD1F76C1C53631800342C71 /* MyAppViewController.h */,
+				FCD1F76D1C53631800342C71 /* MyAppViewController.m */,
+				FCD1F76F1C5363FC00342C71 /* SMShareBottomView.h */,
+				FCD1F7701C5363FC00342C71 /* SMShareBottomView.m */,
+			);
+			name = SMShareBottomView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +252,7 @@
 				TargetAttributes = {
 					B66BF3AC1B0C137E0082F8D6 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AX672N92PZ;
 					};
 					B66BF3C51B0C137E0082F8D6 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -297,6 +316,8 @@
 				B66BF3B31B0C137E0082F8D6 /* main.m in Sources */,
 				B66BF3EF1B0C16290082F8D6 /* OpenShare+Weibo.m in Sources */,
 				B6E22B1F1B213B09001930CA /* OpenShare+Alipay.m in Sources */,
+				FCD1F76E1C53631800342C71 /* MyAppViewController.m in Sources */,
+				FCD1F7711C5363FC00342C71 /* SMShareBottomView.m in Sources */,
 				B66BF3ED1B0C16290082F8D6 /* OpenShare+QQ.m in Sources */,
 				B66BF3F01B0C16290082F8D6 /* OpenShare+Weixin.m in Sources */,
 			);
@@ -419,10 +440,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = openshare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "03aa94fb-99a5-41cb-8d6b-ed2b2f4f9610";
 			};
 			name = Debug;
 		};
@@ -431,10 +455,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (RGR96FVT75)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = openshare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "03aa94fb-99a5-41cb-8d6b-ed2b2f4f9610";
 			};
 			name = Release;
 		};
